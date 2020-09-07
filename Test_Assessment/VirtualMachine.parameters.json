@@ -1,0 +1,23 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "adminUsername": {
+      "value": "azureadmin"
+    },
+    "adminPassword": {
+      "reference": {
+        "keyVault": {
+          "id": "/subscriptions/aa148ebc-6f18-4f14-9110-c17e5504bf3c/resourceGroups/rgazeudev001-sai/providers/Microsoft.KeyVault/vaults/keydev001"
+        },
+        "secretName": "AdminPassword"
+      }
+    },
+    "vnetName": {
+      "value": "windowsVnet"
+    },
+    "subnetName": {
+      "value": "windowsSubnet"
+    }
+  }
+}
